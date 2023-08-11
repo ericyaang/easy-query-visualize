@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "easy-query-visualize"
+version = "0.1.0"
+description = ""
+authors = ["ericyaang <eric_yang@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "easy_query_visualize"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.25.0"
+duckdb = "^0.8.1"
+python-dotenv = "^1.0.0"
+pandas = "^2.0.3"
+fastparquet = "^2023.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
