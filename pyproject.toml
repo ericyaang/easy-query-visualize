@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["ericyaang <eric_yang@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "easy_query_visualize"}]
+packages = [{include = "duckdb_utils", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -13,7 +13,11 @@ duckdb = "^0.8.1"
 python-dotenv = "^1.0.0"
 pandas = "^2.0.3"
 fastparquet = "^2023.7.0"
+plotly = "^5.16.0"
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.1"
 
 [build-system]
 requires = ["poetry-core"]

@@ -51,7 +51,7 @@ def load_parquet_from_bucket(
 
 
 def main(table_name=str):
-    bucket_path = f"{BUCKET_NAME}/{BUCKET_PATH_BRONZE}"
+    bucket_path = f"{BUCKET_NAME}/{BUCKET_PATH_GOLD}/*/*/*/*.parquet"
 
     # Establish a connection to DuckDB
     duckdb_conn = setup_duckdb_connection(ACCESS, SECRET)
@@ -60,7 +60,7 @@ def main(table_name=str):
     load_parquet_from_bucket(
         duckdb_conn,
         table_name,
-        f"{bucket_path}/*/*/*/*.parquet",
+        bucket_path,
     )
 
     duckdb_conn.close()
